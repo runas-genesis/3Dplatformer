@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6970641511574204326}
   - component: {fileID: 645795765433067957}
   - component: {fileID: 3689697603962917033}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6970641511574204326
 MeshFilter:
@@ -91,7 +91,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6737825492210738711}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d4d9f7ea88ebacc4e9055f3638ed20b4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
