@@ -32,6 +32,14 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy Head"))
+        {
+            Destroy(collision.transform.parent.gameObject);
+        }
+    }
+
     bool IsGrounded()
     {
         return Physics.CheckSphere(groundCheck.position, 0.1f, ground);
