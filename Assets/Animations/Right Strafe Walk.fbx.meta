@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7bd4e1d26a8acf84893668e90cbd46f9
+guid: f3f027e988e57064687ee61c2daf7ebb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -62,11 +62,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 1
     - serializedVersion: 16
-      name: Falling
+      name: right strafe
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 341
+      lastFrame: 28
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
