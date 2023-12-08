@@ -9,6 +9,9 @@ public class PlayerMove : MonoBehaviour
     public LayerMask layerMask;
     public bool grounded;
     public float anima;
+    public GameObject GroundChecker;
+
+    public float speed = 0.01f;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +38,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Grounded()
     {
-        if (Physics.CheckSphere(this.transform.position + Vector3.down, anima, layerMask))
+        if (Physics.CheckSphere(GroundChecker.transform.position, anima, layerMask))
         {
             this.grounded = true;
         }
@@ -43,6 +46,8 @@ public class PlayerMove : MonoBehaviour
         {
             this.grounded = false;
         }
+
+
         this.anim.SetBool("jump", !this.grounded);
     }
 
@@ -51,24 +56,10 @@ public class PlayerMove : MonoBehaviour
         float verticalAxis = Input.GetAxis("Vertical");
         float horizontalAxis = Input.GetAxis("Horizontal");
 
-        Vector3 movement = this.transform.forward 
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            * verticalAxis + this.transform.right * horizontalAxis;
+        Vector3 movement = this.transform.forward * verticalAxis + this.transform.right * horizontalAxis;
         movement.Normalize();
 
-        this.transform.position += movement * 0.01f;
+        this.transform.position += movement * speed;
 
         this.anim.SetFloat("vertical", verticalAxis);
         this.anim.SetFloat("horizontal", horizontalAxis);
